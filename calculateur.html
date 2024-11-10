@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Calories</title>
+    <link rel="stylesheet" href="/Site-web/CSS/calculateur.css">
+    <script src="/JS/calculateur.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+
+        <!-- Menu de navigation -->
+        <nav>
+            <div class="nav-container">
+                <img src="/Site-web/Images-plat/LOGOO.png" alt="Logo" class="logo"> <!-- Remplacez par le chemin de votre logo -->
+                <ul class="nav-menu">
+                    <li><a href="/accueil.html">Accueil</a></li>
+                    <li><a href="/calculateur.html">Calculer vos calories</a></li>
+                    <li><a href="/planning-semaine.html">Planning semaine</a></li>
+                    <li><a href="/tarifs.html">Tarifs</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- <h1>Calculateur de Calories</h1> -->
+        <!-- Section du calculateur de calories -->
+        <section id="calculateur-calories">
+            <h2>Calculez vos calories quotidiennes</h2>
+            <form id="calories-form">
+                <label for="age">Âge :</label>
+                <input type="number" id="age" name="age" required>
+                
+                <label for="sexe">Sexe :</label>
+                <select id="sexe" name="sexe">
+                    <option value="homme">Homme</option>
+                    <option value="femme">Femme</option>
+                </select>
+
+                <label for="poids">Poids (kg) :</label>
+                <input type="number" id="poids" name="poids" required>
+
+                <label for="taille">Taille (cm) :</label>
+                <input type="number" id="taille" name="taille" required>
+
+                <label for="activite">Niveau d'activité :</label>
+                <select id="activite" name="activite">
+                    <option value="sédentaire">Sédentaire</option>
+                    <option value="légèrement actif">Légèrement actif</option>
+                    <option value="actif">Actif</option>
+                    <option value="très actif">Très actif</option>
+                </select>
+
+                <button type="submit">Calculer</button>
+            </form>
+
+            <div id="resultat" style="display: none;">
+                <h3>Vos calories quotidiennes recommandées :</h3>
+                <div id="calories-container">
+                    <p id="calories"></p>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+
+    <script src="/Site-web/JS/calculateur.js"></script>
+</body>
+</html>

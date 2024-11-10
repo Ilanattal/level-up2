@@ -1,0 +1,45 @@
+body {
+    font-family: 'Georgia', serif; /* Changez la police pour une plus chic */
+}
+
+/* Styles pour le menu de navigation */
+nav {
+    background-color: #739f5f; /* Couleur de fond du menu */
+    padding: 10px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis pour le menu */
+    margin-bottom: 20px; /* Espacement sous le menu */
+}
+
+.nav-container {
+    display: flex; /* Utilise Flexbox pour l'alignement */
+    align-items: center; /* Centre verticalement les éléments */
+}
+
+.logo {
+    width: 50px; /* Ajustez la taille du logo */
+    height: auto; /* Maintient les proportions */
+    margin-right: 20px; /* Espace à droite du logo */
+}
+
+.nav-menu {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Supprime le padding par défaut */
+    display: flex; /* Affichage en flex pour l'alignement horizontal */
+    flex: 1; /* Prend tout l'espace restant */
+    justify-content: space-around; /* Espace égal entre les liens */
+}
+
+.nav-menu li {
+    margin: 0; /* Suppression de l'espacement entre les éléments du menu */
+}
+
+.nav-menu a {
+    color: #ffffff; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 18px; /* Taille de la police */
+    transition: color 0.3s ease; /* Transition pour le survol */
+}
+
+.nav-menu a:hover {
+    color: #eac641; /* Couleur au survol */
+}

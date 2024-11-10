@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de planning des repas</title>
+    <link rel="stylesheet" href="/Site-web/CSS/planning-semaine.css">
+</head>
+<body>
+    
+    <div class="container">
+        <nav>
+            <div class="nav-container">
+                <img src="Site-web/Images-plat/LOGOO.png" alt="Logo" class="logo"> <!-- Remplacez par le chemin de votre logo -->
+                <ul class="nav-menu">
+                    <li><a href="/accueil.html">Accueil</a></li>
+                    <li><a href="/calculateur.html">Calculer vos calories</a></li>
+                    <li><a href="/planning-semaine.html">Planning semaine</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1>Planning de la semaine</h1>
+        <h6>Cliquer sur une recette puis cliquer sur le jour du planning ou vous souhaitez la manger !</h6>
+
+        <!-- Section des recettes avec menu déroulant -->
+        <div class="dropdown">
+            <button class="dropbtn">Catégorie</button>
+            <div class="dropdown-content">
+                <span>Plats Principaux</span>
+                <a href="#" onclick="showRecettes('platsPrincipaux')">Plats Principaux</a>
+                <span>Snack Sucré</span>
+                <a href="#" onclick="showRecettes('snacksSucre')">Snacks Sucrés</a>
+            </div>
+        </div>
+
+        <!-- Section des recettes disponibles -->
+        <p class="recettes-texte"></p>
+        <section id="recettes-disponibles">
+            <!-- Plats Principaux -->
+            <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Gnoochies aux poulet')" id="recette1">
+                <img src="/Site-web/Images-plat/Gnoochies-aux-poulet.webp" alt="Gnoochies aux poulet">
+                <p>Gnoochies aux poulet</p>
+                <div class="tooltip" style="display: none;">
+                    <img src="/Images-plat/Gnoochies-aux-poulet.webp" alt="Gnoochies aux poulet">
+                    <h6>Délicieux gnoochies avec du poulet</h6>
+                    <h5>Voici la nouvelle recette de gnoochies aux poulet delicieux accompagnés de sa sauce barbecue ou teryaki aux choix.</h5>
+                </div>
+            </div>
+            <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Pâtes bolognaise')" id="recette2">
+                <img src="/Site-web/Images-plat/Pates-bolognaise.webp" alt="Pâtes bolognaise">
+                <p>Pâtes bolognaise</p>
+                <div class="tooltip" style="display: none;">
+                    <img src="/Images-plat/Pates-bolognaise.webp" alt="Pâtes bolognaise">
+                    <h6>Une recette classique de pâtes bolognaises.</h6>
+                </div>
+            </div>
+            <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Penne aux poulet épinard')" id="recette3">
+                <img src="/Site-web/Images-plat/Penne-aux-poulet-epinard.webp" alt="Penne aux poulet épinard">
+                <p>Penne aux poulet épinard</p>
+                <div class="tooltip" style="display: none;">
+                    <img src="/Site-web/Images-plat/Penne-aux-poulet-epinard.webp" alt="Penne aux poulet épinard">
+                    <h6>Penne avec poulet et épinards frais.</h6>
+                </div>
+            </div>
+            <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Penne aux boeuf et poivrons')" id="recette4">
+                <img src="/Site-web/Images-plat/Penne-aux-boeuf-et-poivrons.webp" alt="Penne aux boeuf et poivrons">
+                <p>Penne aux boeuf et poivrons</p>
+                <div class="tooltip" style="display: none;">
+                    <img src="/Site-web/Images-plat/Penne-aux-boeuf-et-poivrons.webp" alt="Penne aux boeuf et poivrons">
+                    <h6>Penne savoureuse avec boeuf et poivrons.</h6>
+                </div>
+            </div>
+            <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Gratin de PDT au saumon')" id="recette5">
+                <img src="/Site-web/Images-plat/Gratin-de-PDT-au-saumon.webp" alt="Gratin de PDT au saumon">
+                <p>Gratin de PDT au saumon</p>
+                <div class="tooltip" style="display: none;">
+                    <img src="/Site-web/Images-plat/Gratin-de-PDT-au-saumon.webp" alt="Gratin de PDT au saumon">
+                    <h6>Un gratin crémeux de pommes de terre et saumon.</h6>
+                </div>
+            </div>
+            <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Bowl de riz au saumon')" id="recette6">
+                <img src="/Site-web/Images-plat/riz-saumon-avocat-concombre-carotte.webp" alt="Bowl de riz au saumon">
+                <p>Bowl de riz au saumon</p>
+                <div class="tooltip" style="display: none;">
+                    <img src="/Site-web/Images-plat/riz-saumon-avocat-concombre-carotte.webp" alt="Bowl de riz au saumon">
+                    <h6>Bowl de riz frais avec saumon et légumes.</h6>
+                </div>
+            </div>
+            <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Gnoochies aux poulet champignons')" id="recette7">
+                <img src="/Site-web/Images-plat/Gnoochies-aux-poulet-champignons.webp" alt="Gnoochies aux poulet champignons">
+                <p>Gnoochies aux poulet champignons</p>
+                <div class="tooltip" style="display: none;">
+                    <img src="/Site-web/Images-plat/Gnoochies-aux-poulet-champignons.webp" alt="Gnoochies aux poulet champignons">
+                    <h6>Gnoochies avec poulet et champignons frais.</h6>
+                </div>
+            </div>
+            <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Gnoochies aux crevettes et épinard')" id="recette8">
+                <img src="/Site-web/Images-plat/Gnoochies-aux-crevettes-et-epinard.webp" alt="Gnoochies aux crevettes et épinard">
+                <p>Gnoochies aux crevettes et épinard</p>
+                <div class="tooltip" style="display: none;">
+                    <img src="/Site-web/Images-plat/Gnoochies-aux-crevettes-et-epinard.webp" alt="Gnoochies aux crevettes et épinard">
+                    <h6>Gnoochies savoureux avec crevettes et épinards.</h6>
+                </div>
+            </div>
+            <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Poêlée de bœuf haché, pomme de terre et poivrons')" id="recette9">
+                <img src="/Site-web/Images-plat/Poêlée-de-bœuf-haché-et-PDT.webp" alt="Poêlée de bœuf haché, pomme de terre et poivrons">
+                <p>Poêlée de bœuf haché, pomme de terre et poivrons</p>
+                <div class="tooltip" style="display: none;">
+                    <img src="/Site-web/Images-plat/Poêlée-de-bœuf-haché-et-PDT.webp" alt="Poêlée de bœuf haché, pomme de terre et poivrons">
+                    <h6>Poêlée nourrissante de boeuf, pommes de terre et poivrons.</h6>
+                </div>
+            </div>
+            <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Riz sauté aux bœuf et légumes')" id="recette10">
+                <img src="/Site-web/Images-plat/Riz-sauté-aux-boeuf-et-legumes.webp" alt="Riz sauté aux bœuf et légumes">
+                <p>Riz sauté aux bœuf et légumes</p>
+                <div class="tooltip" style="display: none;">
+                    <img src="/Site-web/Images-plat/Riz-sauté-aux-boeuf-et-legumes.webp" alt="Riz sauté aux bœuf et légumes">
+                    <h6>Riz sauté avec du boeuf et des légumes frais.</h6>
+                </div>
+            </div>
+            <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Penne aux poulet et légumes')" id="recette11">
+                <img src="/Site-web/Images-plat/Pates-aux-poulet-et-legumes.webp" alt="Penne aux poulet et légumes">
+                <p>Penne aux poulet et légumes</p>
+                <div class="tooltip" style="display: none;">
+                    <img src="/Site-web/Images-plat/Pates-aux-poulet-et-legumes.webp" alt="Penne aux poulet et légumes">
+                    <h6>Penne savoureuse avec poulet et légumes variés.</h6>
+                </div>
+            </div>
+
+            <!-- Section pour les Snacks Sucrés -->
+            <div id="snacksSucre" style="display: none;">
+                <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Cookies chocolat')" id="recette12">
+                    <img src="/Site-web/Images-plat/Cookies-chocolat.webp" alt="Cookies chocolat">
+                    <p>Cookies chocolat</p>
+                    <div class="tooltip" style="display: none;">
+                        <img src="/Site-web/Images-plat/Cookies-chocolat.webp" alt="Cookies chocolat">
+                        <p>Cookies moelleux au chocolat.</p>
+                    </div>
+                </div>
+                <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Muffins aux fruits')" id="recette13">
+                    <img src="/Site-web/Images-plat/Muffins-aux-fruits.webp" alt="Muffins aux fruits">
+                    <p>Muffins aux fruits</p>
+                    <div class="tooltip" style="display: none;">
+                        <img src="/Site-web/Images-plat/Muffins-aux-fruits.webp" alt="Muffins aux fruits">
+                        <p>Muffins légers avec un mélange de fruits.</p>
+                    </div>
+                </div>
+                <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Crêpes sucrées')" id="recette14">
+                    <img src="/Site-web/Images-plat/Crepes-sucrees.webp" alt="Crêpes sucrées">
+                    <p>Crêpes sucrées</p>
+                    <div class="tooltip" style="display: none;">
+                        <img src="/Site-webImages-plat/Crepes-sucrees.webp" alt="Crêpes sucrées">
+                        <p>Délicieuses crêpes sucrées, parfaites pour le dessert.</p>
+                    </div>
+                </div>
+                <div class="recette-card" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="selectRecette('Brownies')" id="recette15">
+                    <img src="/Site-web/Images-plat/Brownies.webp" alt="Brownies">
+                    <p>Brownies</p>
+                    <div class="tooltip" style="display: none;">
+                        <img src="/Site-web/Images-plat/Brownies.webp" alt="Brownies">
+                        <p>Brownies riches en chocolat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planning de la semaine avec clic pour dépôt -->
+        <section id="planning">
+            <h2>Planning</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Lundi</th>
+                        <th>Mardi</th>
+                        <th>Mercredi</th>
+                        <th>Jeudi</th>
+                        <th>Vendredi</th>
+                        <th>Samedi</th>
+                        <th>Dimanche</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Déjeuner</td>
+                        <td id="lundi-dejeuner" onclick="deposerRecette(this)"></td>
+                        <td id="mardi-dejeuner" onclick="deposerRecette(this)"></td>
+                        <td id="mercredi-dejeuner" onclick="deposerRecette(this)"></td>
+                        <td id="jeudi-dejeuner" onclick="deposerRecette(this)"></td>
+                        <td id="vendredi-dejeuner" onclick="deposerRecette(this)"></td>
+                        <td id="samedi-dejeuner" onclick="deposerRecette(this)"></td>
+                        <td id="dimanche-dejeuner" onclick="deposerRecette(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>Dîner</td>
+                        <td id="lundi-diner" onclick="deposerRecette(this)"></td>
+                        <td id="mardi-diner" onclick="deposerRecette(this)"></td>
+                        <td id="mercredi-diner" onclick="deposerRecette(this)"></td>
+                        <td id="jeudi-diner" onclick="deposerRecette(this)"></td>
+                        <td id="vendredi-diner" onclick="deposerRecette(this)"></td>
+                        <td id="samedi-diner" onclick="deposerRecette(this)"></td>
+                        <td id="dimanche-diner" onclick="deposerRecette(this)"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Bouton pour afficher la liste de courses -->
+        <section id="afficher-liste-courses-section">
+            <button id="afficher-liste-courses" onclick="genererListeCourses()">Afficher la liste de courses</button>
+        </section>
+
+        <!-- Liste des courses -->
+        <section id="liste-courses">
+            <h2>Liste de courses</h2>
+            <div class="courses-container">
+                <ul id="courses"></ul>
+            </div>
+            <p id="total-cost"></p> <!-- Affichage du coût total -->
+        </section>
+    </div>
+
+    <script src="/JS/planning-semaine.js"></script>
+</body>
+</html>
+

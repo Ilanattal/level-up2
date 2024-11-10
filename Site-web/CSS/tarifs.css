@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 50px auto auto auto;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.header nav {
+    grid-column: 2 / span 3;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Conteneur de grille */
+.grid-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Styles généraux pour chaque plan */
+/* Style général des cartes */
+/* Style général des cartes */
+.plan {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol, avec plus de mouvement */
+.plan:hover {
+    transform: scale(1.1) translateY(-15px); /* Agrandit de 10 % et déplace de 15px vers le haut */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Ombre plus large et intense */
+}
+
+
+
+.plan-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.plan-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left; /* Aligne le texte à gauche pour remplir la case */
+}
+
+.plan-content li {
+    position: relative; /* Permet de positionner le point avant l'élément */
+    margin-bottom: 10px; /* Espace entre les éléments */
+    padding-left: 20px; /* Espace pour le point */
+}
+
+.plan-content li::before {
+    content: ""; /* Crée un élément vide pour le point */
+    position: absolute;
+    left: 0;
+    top: 8px; /* Ajuste pour aligner verticalement */
+    width: 10px; /* Largeur du point */
+    height: 10px; /* Hauteur du point */
+    background-color: #007b5e; /* Couleur du point */
+    border-radius: 50%; /* Rend le point circulaire */
+}
+
+
+.plan-content p.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007b5e;
+}
+
+/* Style pour agrandir l'offre Gold */
+#gold {
+    transform: scale(1.1); /* Agrandit la carte Gold de 10 % */
+    border: 2px solid #007b5e; /* Change la couleur de la bordure pour la démarquer */
+    background-color: #e8f5e9; /* Fond légèrement différent */
+}
+
+/* Style pour réduire les cartes Silver et Bronze */
+#silver, #bronze {
+    transform: scale(0.9); /* Réduit les cartes Silver et Bronze de 10 % */
+}
+
+.services {
+    display: flex;
+    flex-direction: column;  /* Garde les services en colonne */
+    align-items: center;     /* Centre les services horizontalement */
+    gap: 40px;               /* Augmente l'espacement entre les services */
+    margin: 40px auto;       /* Ajoute un espace au-dessus et en dessous */
+}
+
+.service {
+    display: flex;
+    flex-direction: row;  /* Texte à côté de l'image */
+    width: 90%;  /* Augmente la largeur des services pour qu'ils occupent presque toute la largeur */
+    max-width: 1200px;  /* Limite la largeur maximale */
+    background-color: #ffffff;
+    border-radius: 12px; /* Coins plus arrondis pour un look moderne */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);  /* Élévation au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  /* Ombre plus marquée au survol */
+}
+
+.service-text {
+    width: 50%;  /* Le texte occupe 50% de la largeur */
+    padding-left: 20px;  /* Ajoute de l'espace à gauche pour les services où le texte est à droite */
+    padding-right: 20px; /* Ajoute de l'espace à droite pour les services où le texte est à gauche */
+}
+
+.service-text h3 {
+    font-size: 1.8em;  /* Augmente la taille du titre */
+    margin-bottom: 15px;
+    color: #2e8b57;   /* Une couleur moderne et plus vive */
+    font-weight: 700;
+}
+
+.service-text ul {
+    list-style-type: none;  /* Supprime les puces par défaut */
+    padding-left: 20px;     /* Décalage de la liste à gauche pour laisser de l'espace pour les emojis */
+    margin: 0;
+}
+
+.service-text ul li {
+    margin-bottom: 20px; /* Plus d'espace entre les éléments de la liste */
+    font-size: 1.3em;  /* Augmente la taille du texte des éléments de la liste */
+    color: #555;
+    line-height: 1.5;  /* Améliore la lisibilité */
+}
+
+/* Emoji spécifique pour chaque élément */
+.service-text ul li:nth-child(1)::before {
+    content: "🍏 ";  /* Pomme verte */
+}
+
+.service-text ul li:nth-child(2)::before {
+    content: "🍽️ ";  /* Assiette */
+}
+
+.service-text ul li:nth-child(3)::before {
+    content: "🍅 ";  /* Tomate */
+}
+
+.service-text ul li:nth-child(4)::before {
+    content: "🥗 ";  /* Salade */
+}
+
+/* Service 2 - Emojis */
+.service:nth-child(2) ul li:nth-child(1)::before {
+    content: "🍔 ";  /* Burger */
+}
+
+.service:nth-child(2) ul li:nth-child(2)::before {
+    content: "🥤 ";  /* Boisson */
+}
+
+.service:nth-child(2) ul li:nth-child(3)::before {
+    content: "🍟 ";  /* Frites */
+}
+
+.service:nth-child(2) ul li:nth-child(4)::before {
+    content: "🍕 ";  /* Pizza */
+}
+
+/* Service 3 - Emojis */
+.service:nth-child(3) ul li:nth-child(1)::before {
+    content: "💪 ";  /* Muscles */
+}
+
+.service:nth-child(3) ul li:nth-child(2)::before {
+    content: "🏋️‍♂️ ";  /* Personne soulevant des poids */
+}
+
+.service:nth-child(3) ul li:nth-child(3)::before {
+    content: "🏃‍♀️ ";  /* Personne courant */
+}
+
+.service:nth-child(3) ul li:nth-child(4)::before {
+    content: "🥇 ";  /* Médaille */
+}
+
+/* Service 4 - Emojis */
+.service:nth-child(4) ul li:nth-child(1)::before {
+    content: "🎯 ";  /* Cible */
+}
+
+.service:nth-child(4) ul li:nth-child(2)::before {
+    content: "📦 ";  /* Boîte */
+}
+
+.service:nth-child(4) ul li:nth-child(3)::before {
+    content: "🚚 ";  /* Camion de livraison */
+}
+
+.service:nth-child(4) ul li:nth-child(4)::before {
+    content: "📦 ";  /* Boîte de livraison */
+}
+
+.service-img {
+    width: 50%;  /* L'image occupe 50% de la largeur du service */
+    height: auto;  /* L'image s'adapte à la hauteur du texte */
+    min-height: auto;  /* Hauteur minimale pour l'image */
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;  /* Coins arrondis pour l'image */
+    overflow: hidden;
+    margin-left: 0px;   /* Espacement par défaut entre l'image et le texte */
+}
+
+.service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Assure que l'image remplit sans déformer */
+    border-radius: 12px;  /* Coins arrondis pour l'image */
+}
+
+/* Espacement supplémentaire pour les services 2 et 4 */
+.service:nth-child(2) .service-img,
+.service:nth-child(4) .service-img {
+    margin-left: 40px;  /* Plus d'espace entre l'image et le texte */
+}
+
+
+
+/* Styles de la barre de navigation */
+/* Styles pour le menu de navigation */
+nav {
+    background-color: #739f5f; /* Couleur de fond du menu */
+    padding: 10px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis pour le menu */
+    margin-bottom: 20px; /* Espacement sous le menu */
+}
+
+.nav-container {
+    display: flex; /* Utilise Flexbox pour l'alignement */
+    align-items: center; /* Centre verticalement les éléments */
+}
+
+.logo {
+    width: 50px; /* Ajustez la taille du logo */
+    height: auto; /* Maintient les proportions */
+    margin-right: 20px; /* Espace à droite du logo */
+}
+
+.nav-menu {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Supprime le padding par défaut */
+    display: flex; /* Affichage en flex pour l'alignement horizontal */
+    flex: 1; /* Prend tout l'espace restant */
+    justify-content: space-around; /* Espace égal entre les liens */
+}
+
+.nav-menu li {
+    margin: 0; /* Suppression de l'espacement entre les éléments du menu */
+}
+
+.nav-menu a {
+    color: #ffffff; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 18px; /* Taille de la police */
+    transition: color 0.3s ease; /* Transition pour le survol */
+}
+
+.nav-menu a:hover {
+    color: #eac641; /* Couleur au survol */
+}
+

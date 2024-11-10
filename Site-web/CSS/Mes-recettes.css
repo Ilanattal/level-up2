@@ -1,0 +1,59 @@
+.titre{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 40px;
+}
+.Nom-recette-1{
+    padding-left: 30px;
+    text-decoration: underline;
+}
+.instructions-recette-1 {
+    font-size: 15px;
+    font-weight: bold;
+}
+.image1{
+    width: 30%;
+    height: 70%;
+}
+
+.tous {
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments en ligne */
+    align-items: stretch; /* Assure que les éléments ont la même hauteur */
+    
+}
+
+.instructions-recette-1 {
+    flex: 1; /* Prend toute la place disponible pour le texte */
+    margin-right: 20px; /* Espace entre le texte et l'image */
+    display: flex; /* Appliquer Flexbox au texte */
+    align-items: center; /* Centrer verticalement le texte dans son bloc */
+    font-size: 25px;
+}
+.instructions-recette-1 ol li {
+    margin-bottom: 130px; /* Ajouter un espacement de 40px entre chaque instruction */
+}
+.instructions-recette-1 ol li:last-child {
+    margin-bottom: 40px; /* Retirer le dernier margin-bottom pour éviter un espace vide en bas */
+}
+.tiktok{
+    margin-left: 60px;
+    margin-right: 40px;
+}
+.Nom-recette-2{
+    text-decoration: underline;
+    margin-left: 25px;
+}
+.instructions-recette-2{
+    display: flex;
+    align-items: stretch;
+    margin-top: 60px;
+}
+.instructions-recette-2 ol li {
+    margin-bottom: 170px;
+    font-size: 24px;
+    font-weight: bold
+}
+.tiktok2{
+    margin-left: 40px;
+    margin-right: 40px;
+}

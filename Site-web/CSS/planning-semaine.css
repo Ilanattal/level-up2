@@ -1,0 +1,391 @@
+/* Styles globaux */
+html, body {
+    height: 100%; /* Assure que html et body prennent toute la hauteur */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fond général */
+    color: #333;
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: flex-start; /* Aligne le contenu vers le haut */
+    min-height: 100vh; /* Assure que le body prend au moins toute la hauteur de l'écran */
+}
+
+/* Navbar */
+nav {
+    background-color: #739f5f; /* Couleur de fond de la navbar */
+    padding: 10px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis pour la navbar */
+    margin-bottom: 20px; /* Espacement sous la navbar */
+}
+
+.nav-container {
+    display: flex; /* Utilise Flexbox pour l'alignement */
+    align-items: center; /* Centre verticalement les éléments */
+}
+
+.logo {
+    width: 150px; /* Ajustez la taille du logo */
+    height: auto; /* Maintient les proportions */
+    margin-right: 20px; /* Espace à droite du logo */
+}
+
+.nav-menu {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Supprime le padding par défaut */
+    display: flex; /* Affichage en flex pour l'alignement horizontal */
+    flex: 1; /* Prend tout l'espace restant */
+    justify-content: space-around; /* Espace égal entre les liens */
+}
+
+.nav-menu li {
+    margin: 0; /* Suppression de l'espacement entre les éléments du menu */
+}
+
+.nav-menu a {
+    color: #ffffff; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 18px; /* Taille de la police */
+    transition: color 0.3s ease; /* Transition pour le survol */
+}
+
+.nav-menu a:hover {
+    color: #eac641; /* Couleur au survol */
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1300px; /* Largeur maximale */
+    width: 100%; /* Prend toute la largeur disponible */
+    padding: 20px; /* Espacement interne */
+    background: #ffffff; /* Couleur de fond du conteneur */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre */
+    border-radius: 10px; /* Coins arrondis */
+    margin: 0px 0; /* Espacement autour du conteneur */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+}
+
+/* Titre principal */
+h1 {
+    color: #739f5f; /* Couleur du titre */
+    text-align: center;
+    font-size: 36px; /* Augmente la taille de la police */
+    margin-bottom: 20px; /* Espacement inférieur */
+    font-family: 'Georgia', serif; /* Changez la police pour une plus chic */
+    text-transform: uppercase; /* Met le texte en majuscules */
+    letter-spacing: 2px; /* Espace entre les lettres */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Ombre légère pour le texte */
+}
+
+/* Texte "Recettes :" */
+.recettes-texte {
+    font-size: 18px;
+    color: #739f5f; /* Couleur du texte des recettes */
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Section des recettes */
+#recettes-disponibles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif; /* Changez la police pour une plus chic */
+}
+
+/* Cartes de recettes */
+.recette-card {
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #eac641; /* Couleur des cartes de recettes */
+    cursor: grab;
+    transition: transform 0.2s;
+}
+
+.recette-card:hover {
+    transform: scale(1.05);
+}
+
+.recette-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.recette-card p {
+    font-size: 14px;
+    color: #ffffff; /* Couleur du texte dans les cartes */
+    padding: 10px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.recette-card h6 {
+    font-size: 14px;
+    color: #ffffff; /* Couleur du texte dans les cartes */
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Planning */
+#planning {
+    width: 100%;
+    margin-top: 10px;
+    overflow-x: auto;
+    box-sizing: border-box;
+    background-color: #c9d5d5; /* Couleur de fond du planning */
+    color: white; /* Couleur du texte en blanc pour le contraste */
+    padding: 10px; /* Ajout d'un padding pour le style */
+    border-radius: 10px; /* Coins arrondis pour le style */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour le relief */
+}
+
+/* Table du planning */
+#planning table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin: 0 auto;
+}
+
+#planning th {
+    background-color: #eac641; /* Couleur des en-têtes */
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Georgia', serif; /* Changez la police pour une plus chic */
+}
+
+#planning td {
+    padding: 15px; /* Espace interne des cellules */
+    border-radius: 8px; /* Coins arrondis pour les cellules */
+    text-align: center;
+    background-color: #739f5f; /* Couleur des cellules */
+    min-height: 70px;
+    border: 1px solid #739f5f; /* Bordure plus douce */
+    transition: background-color 0.3s, transform 0.2s; /* Transition pour les effets */
+    font-family: 'Georgia', serif; /* Changez la police pour une plus chic */
+}
+
+/* Effet de survol des cellules */
+#planning td:hover {
+    background-color: #eac641; /* Change la couleur au survol */
+    transform: scale(1.05); /* Légère augmentation au survol */
+}
+
+/* Bouton pour afficher la liste de courses */
+#afficher-liste-courses-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#afficher-liste-courses {
+    padding: 10px 20px;
+    background-color: #739f5f; /* Couleur du bouton */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#afficher-liste-courses:hover {
+    background-color: #eac641; /* Couleur de fond au survol */
+}
+
+/* Liste de courses */
+#liste-courses {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #fdfffc; /* Couleur de fond de la liste de courses */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centre le texte dans la section */
+}
+
+/* Conteneur pour la liste de courses */
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#courses li {
+    font-size: 16px;
+    padding: 8px 12px;
+    background-color: #739f5f; /* Couleur des éléments de la liste de courses */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* Couleur du texte dans la liste de courses */
+}
+
+/* Coût total */
+#total-cost {
+    font-size: 20px;
+    font-weight: bold;
+    color: #739f5f; /* Couleur du coût total */
+    text-align: center; /* Centre le texte du coût total */
+    margin-top: 20px;
+}
+
+/* Style pour centrer le bouton de recettes */
+.dropdown {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    margin: 20px 0; /* Espacement autour du menu */
+}
+
+.dropbtn {
+    background-color: #739f5f; /* Couleur du bouton */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: #fc7a1c; /* Couleur du bouton au survol */
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none; /* Masquer le contenu par défaut */
+    position: absolute;
+    background-color: #fdfffc; /* Fond du menu déroulant */
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content span {
+    display: block;
+    padding: 10px 16px;
+    font-weight: bold;
+    color: #739f5f; /* Couleur pour les titres de catégorie */
+    background-color: #c9d5d5; /* Fond léger pour le titre de la catégorie */
+}
+
+.dropdown-content a {
+    color: #333; /* Couleur du texte des liens */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #739f5f; /* Fond au survol des liens */
+    color: white; /* Couleur du texte au survol */
+}
+
+/* Afficher le menu lors du survol du bouton */
+.dropdown:hover .dropdown-content {
+    display: block; /* Afficher le menu déroulant */
+}
+
+h6 {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Georgia', serif; /* Changez la police pour une plus chic */
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Georgia', serif; /* Changez la police pour une plus chic */
+    background-color: #739f5f; /* Couleur des en-têtes */
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+button {
+    font-family: 'Georgia', serif; /* Changez la police pour une plus chic */
+}
+
+.recipe-container {
+    display: grid; /* Utilise Grid pour la mise en page */
+    grid-template-columns: 1fr auto; /* Une colonne pour le texte, une pour la croix */
+    align-items: start; /* Aligne les éléments en haut de la cellule */
+    width: 100%; /* Assure que le conteneur occupe toute la largeur de la cellule */
+    text-align: center; /* Centre le texte à l'intérieur du conteneur */
+}
+
+.recipe-image {
+    width: 100%; /* Assure que l'image s'adapte à la largeur du conteneur */
+    height: auto; /* Maintient les proportions de l'image */
+    margin-bottom: 5px; /* Espace entre l'image et le texte */
+}
+
+
+.remove-recipe {
+    color: red; /* Couleur de la croix */
+    cursor: pointer; /* Change le curseur au survol */
+    font-weight: bold; /* Met en gras la croix */
+    margin-left: 10%; /* Espace à gauche de la croix */
+    margin-top: -10%; /* Déplace la croix légèrement vers le haut */
+}
+
+/* Optionnel : cache la croix par défaut, l'affiche lors du survol */
+td:hover .remove-recipe {
+    display: inline; /* Affiche la croix au survol */
+}
+
+
+.recette-card {
+    position: relative; /* Nécessaire pour positionner la tooltip correctement */
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%; /* Positionne la tooltip au-dessus de la recette */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #739f5f; /* Couleur de fond de la tooltip */
+    color: white; /* Couleur du texte de la tooltip */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Assure que la tooltip est au-dessus des autres éléments */
+    width: 150px; /* Largeur de la tooltip */
+    display: none; /* Cacher par défaut */
+}
+
+.tooltip img {
+    width: 100%; /* Ajuste l'image à la largeur de la tooltip */
+    height: auto; /* Maintient les proportions */
+}
+
+

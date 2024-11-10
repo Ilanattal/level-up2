@@ -125,6 +125,7 @@ body {
     transform: scale(0.9); /* Réduit les cartes Silver et Bronze de 10 % */
 }
 
+
 .services {
     display: flex;
     flex-direction: column;  /* Garde les services en colonne */
@@ -151,11 +152,18 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  /* Ombre plus marquée au survol */
 }
 
+
+   /* Centrer le texte au milieu de chaque bloc de service en mode desktop */
 .service-text {
-    width: 50%;  /* Le texte occupe 50% de la largeur */
-    padding-left: 20px;  /* Ajoute de l'espace à gauche pour les services où le texte est à droite */
-    padding-right: 20px; /* Ajoute de l'espace à droite pour les services où le texte est à gauche */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre le texte verticalement */
+    align-items: center; /* Centre le texte horizontalement */
+    text-align: center; /* Centre le texte à l'intérieur du conteneur */
+    padding: 20px; /* Ajuste le padding pour un meilleur espacement */
 }
+
+
 
 .service-text h3 {
     font-size: 1.8em;  /* Augmente la taille du titre */
@@ -276,7 +284,7 @@ body {
 /* Styles de la barre de navigation */
 /* Styles pour le menu de navigation */
 nav {
-    background-color: #739f5f; /* Couleur de fond du menu */
+    background-color: #007b5e; /* Couleur de fond du menu */
     padding: 10px; /* Espacement interne */
     border-radius: 5px; /* Coins arrondis pour le menu */
     margin-bottom: 20px; /* Espacement sous le menu */
@@ -315,4 +323,114 @@ nav {
 .nav-menu a:hover {
     color: #eac641; /* Couleur au survol */
 }
+
+/* Style du badge Recommandé */
+.badge-recommended {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #eac641;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Style du bouton Choisir ce plan */
+.choose-plan-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007b5e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.choose-plan-btn:hover {
+    background-color: #005f47;
+    transform: translateY(-3px);
+}
+
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .plan {
+        transform: scale(1); /* Remet la taille normale */
+    }
+    .services {
+        flex-direction: column; /* Les services passent en colonne */
+    }
+
+    .service {
+        flex-direction: column; /* Image et texte en colonne */
+        text-align: center; /* Centre le texte pour plus d’harmonie */
+        width: 100%; /* Prend toute la largeur disponible */
+    }
+
+    .service-img,
+    .service-text {
+        width: 100%; /* Occupe toute la largeur en responsive */
+    }
+
+    @media (max-width: 768px) {
+        .service-img {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centre l'image horizontalement */
+            margin: 0 auto; /* Centre la case de l'image */
+        }
+    
+        .service-img img {
+            width: 100%; /* Assure que l'image ne dépasse pas la largeur du conteneur */
+            max-width: 100%; /* Limite la largeur à 100% du conteneur */
+            height: auto; /* Conserve les proportions de l'image */
+     
+
+        }
+    }
+    
+}
+
+/* Style du prix barré */
+.original-price {
+    color: red;
+    text-decoration: line-through;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* Style du prix promotionnel en vert */
+.discount-price {
+    color: #007b5e; /* Utilise le vert existant */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Style du badge de réduction */
+.badge-discount {
+    position: absolute;
+    top: 20px; /* Ajuste la position pour qu’il soit sous "Recommandé" */
+    right: -10px;
+    background-color: #e53935; /* Rouge vif pour attirer l'attention */
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 

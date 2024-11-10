@@ -15,12 +15,12 @@ body {
     min-height: 100vh; /* Assure que le body prend au moins toute la hauteur de l'écran */
 }
 
-/* Navbar */
+/* Styles de la barre de navigation pour correspondre à la page tarifs */
 nav {
-    background-color: #739f5f; /* Couleur de fond de la navbar */
+    background-color: #007b5e; /* Couleur de fond du menu */
     padding: 10px; /* Espacement interne */
-    border-radius: 5px; /* Coins arrondis pour la navbar */
-    margin-bottom: 20px; /* Espacement sous la navbar */
+    border-radius: 5px; /* Coins arrondis pour le menu */
+    margin-bottom: 0px; /* Espacement sous le menu */
 }
 
 .nav-container {
@@ -29,7 +29,7 @@ nav {
 }
 
 .logo {
-    width: 150px; /* Ajustez la taille du logo */
+    width: 50px; /* Ajustez la taille du logo pour uniformiser */
     height: auto; /* Maintient les proportions */
     margin-right: 20px; /* Espace à droite du logo */
 }
@@ -57,12 +57,13 @@ nav {
     color: #eac641; /* Couleur au survol */
 }
 
+
 /* Conteneur principal */
 .container {
     max-width: 1300px; /* Largeur maximale */
     width: 100%; /* Prend toute la largeur disponible */
-    padding: 20px; /* Espacement interne */
-    background: #ffffff; /* Couleur de fond du conteneur */
+    padding: 0px; /* Espacement interne */
+    background: #f9f9f9; /* Couleur de fond du conteneur */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre */
     border-radius: 10px; /* Coins arrondis */
     margin: 0px 0; /* Espacement autour du conteneur */
@@ -71,7 +72,7 @@ nav {
 
 /* Titre principal */
 h1 {
-    color: #739f5f; /* Couleur du titre */
+    color: #2e8b57; /* Couleur du titre */
     text-align: center;
     font-size: 36px; /* Augmente la taille de la police */
     margin-bottom: 20px; /* Espacement inférieur */
@@ -84,7 +85,7 @@ h1 {
 /* Texte "Recettes :" */
 .recettes-texte {
     font-size: 18px;
-    color: #739f5f; /* Couleur du texte des recettes */
+    color: #2e8b57; /* Couleur du texte des recettes */
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -107,7 +108,7 @@ h1 {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #eac641; /* Couleur des cartes de recettes */
+    background-color: #fbe3a2; /* Couleur des cartes de recettes */
     cursor: grab;
     transition: transform 0.2s;
 }
@@ -126,7 +127,7 @@ h1 {
 
 .recette-card p {
     font-size: 14px;
-    color: #ffffff; /* Couleur du texte dans les cartes */
+    color: #000000; /* Couleur du texte dans les cartes */
     padding: 10px;
     margin: 0;
     font-weight: bold;
@@ -145,8 +146,8 @@ h1 {
     margin-top: 10px;
     overflow-x: auto;
     box-sizing: border-box;
-    background-color: #c9d5d5; /* Couleur de fond du planning */
-    color: white; /* Couleur du texte en blanc pour le contraste */
+    background-color: #f9f9f9; /* Couleur de fond du planning */
+    color: #333; /* Couleur du texte */
     padding: 10px; /* Ajout d'un padding pour le style */
     border-radius: 10px; /* Coins arrondis pour le style */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour le relief */
@@ -162,7 +163,7 @@ h1 {
 }
 
 #planning th {
-    background-color: #eac641; /* Couleur des en-têtes */
+    background-color: #fbe3a2; /* Couleur des en-têtes */
     padding: 12px;
     border-radius: 8px;
     text-align: center;
@@ -174,16 +175,16 @@ h1 {
     padding: 15px; /* Espace interne des cellules */
     border-radius: 8px; /* Coins arrondis pour les cellules */
     text-align: center;
-    background-color: #739f5f; /* Couleur des cellules */
+    background-color: #2e8b57; /* Couleur des cellules */
     min-height: 70px;
-    border: 1px solid #739f5f; /* Bordure plus douce */
+    border: 1px solid #2e8b57; /* Bordure plus douce */
     transition: background-color 0.3s, transform 0.2s; /* Transition pour les effets */
     font-family: 'Georgia', serif; /* Changez la police pour une plus chic */
 }
 
 /* Effet de survol des cellules */
 #planning td:hover {
-    background-color: #eac641; /* Change la couleur au survol */
+    background-color: #007b5e; /* Change la couleur au survol */
     transform: scale(1.05); /* Légère augmentation au survol */
 }
 
@@ -197,7 +198,7 @@ h1 {
 
 #afficher-liste-courses {
     padding: 10px 20px;
-    background-color: #739f5f; /* Couleur du bouton */
+    background-color: #2e8b57; /* Couleur du bouton */
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -208,7 +209,7 @@ h1 {
 }
 
 #afficher-liste-courses:hover {
-    background-color: #eac641; /* Couleur de fond au survol */
+    background-color: #007b5e; /* Couleur de fond au survol */
 }
 
 /* Liste de courses */
@@ -217,7 +218,7 @@ h1 {
     overflow-x: auto;
     margin-top: 30px;
     padding: 10px;
-    background-color: #fdfffc; /* Couleur de fond de la liste de courses */
+    background-color: #f9f9f9; /* Couleur de fond de la liste de courses */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center; /* Centre le texte dans la section */
@@ -243,7 +244,7 @@ h1 {
 #courses li {
     font-size: 16px;
     padding: 8px 12px;
-    background-color: #739f5f; /* Couleur des éléments de la liste de courses */
+    background-color: #2e8b57; /* Couleur des éléments de la liste de courses */
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: #ffffff; /* Couleur du texte dans la liste de courses */
@@ -253,7 +254,7 @@ h1 {
 #total-cost {
     font-size: 20px;
     font-weight: bold;
-    color: #739f5f; /* Couleur du coût total */
+    color: #2e8b57; /* Couleur du coût total */
     text-align: center; /* Centre le texte du coût total */
     margin-top: 20px;
 }
@@ -266,7 +267,7 @@ h1 {
 }
 
 .dropbtn {
-    background-color: #739f5f; /* Couleur du bouton */
+    background-color: #2e8b57; /* Couleur du bouton */
     color: white;
     padding: 10px 20px;
     font-size: 16px;
@@ -277,14 +278,14 @@ h1 {
 }
 
 .dropbtn:hover {
-    background-color: #fc7a1c; /* Couleur du bouton au survol */
+    background-color: #007b5e; /* Couleur du bouton au survol */
 }
 
 /* Dropdown content */
 .dropdown-content {
     display: none; /* Masquer le contenu par défaut */
     position: absolute;
-    background-color: #fdfffc; /* Fond du menu déroulant */
+    background-color: #f9f9f9; /* Fond du menu déroulant */
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -294,8 +295,8 @@ h1 {
     display: block;
     padding: 10px 16px;
     font-weight: bold;
-    color: #739f5f; /* Couleur pour les titres de catégorie */
-    background-color: #c9d5d5; /* Fond léger pour le titre de la catégorie */
+    color: #2e8b57; /* Couleur pour les titres de catégorie */
+    background-color: #007b5e; /* Fond pour le titre de la catégorie */
 }
 
 .dropdown-content a {
@@ -306,7 +307,7 @@ h1 {
 }
 
 .dropdown-content a:hover {
-    background-color: #739f5f; /* Fond au survol des liens */
+    background-color: #2e8b57; /* Fond au survol des liens */
     color: white; /* Couleur du texte au survol */
 }
 
@@ -324,7 +325,7 @@ h6 {
 h2 {
     text-align: center;
     font-family: 'Georgia', serif; /* Changez la police pour une plus chic */
-    background-color: #739f5f; /* Couleur des en-têtes */
+    background-color: #2e8b57; /* Couleur des en-têtes */
     padding: 12px;
     border-radius: 8px;
     font-weight: bold;
@@ -373,7 +374,7 @@ td:hover .remove-recipe {
     bottom: 100%; /* Positionne la tooltip au-dessus de la recette */
     left: 50%;
     transform: translateX(-50%);
-    background-color: #739f5f; /* Couleur de fond de la tooltip */
+    background-color: #2e8b57; /* Couleur de fond de la tooltip */
     color: white; /* Couleur du texte de la tooltip */
     padding: 10px;
     border-radius: 5px;
@@ -388,4 +389,63 @@ td:hover .remove-recipe {
     height: auto; /* Maintient les proportions */
 }
 
+/* Responsive pour les écrans moyens */
+@media (max-width: 1024px) {
+    .container {
+        padding: 10px;
+    }
 
+    /* Réduit la taille des titres pour les écrans moyens */
+    h1, h2 {
+        font-size: 28px;
+    }
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+    /* Ajuste la navigation en colonne pour les petits écrans */
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px; /* Espace entre les liens en colonne */
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    /* Cartes de recettes en pleine largeur */
+    .recette-card {
+        width: 100%;
+    }
+
+    /* Tableau de planning : taille ajustée et défilement horizontal */
+    #planning table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    /* Ajuste la section des recettes et des boutons pour les petits écrans */
+    #recettes-disponibles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #afficher-liste-courses-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        min-width: 100%;
+    }
+}

@@ -1,13 +1,14 @@
 body {
     font-family: 'Georgia', serif;
+    margin: 0px;
 }
 
-/* Styles pour le menu de navigation */
+/* Styles de la barre de navigation pour correspondre à la page tarifs */
 nav {
-    background-color: #739f5f; /* Couleur de fond du menu */
+    background-color: #007b5e; /* Couleur de fond du menu */
     padding: 10px; /* Espacement interne */
     border-radius: 5px; /* Coins arrondis pour le menu */
-    margin-bottom: 20px; /* Espacement sous le menu */
+    margin-bottom: 0px; /* Espacement sous le menu */
 }
 
 .nav-container {
@@ -16,7 +17,7 @@ nav {
 }
 
 .logo {
-    width: 50px; /* Ajustez la taille du logo */
+    width: 50px; /* Ajustez la taille du logo pour uniformiser */
     height: auto; /* Maintient les proportions */
     margin-right: 20px; /* Espace à droite du logo */
 }
@@ -54,7 +55,7 @@ nav {
 }
 
 #calculateur-calories h2 {
-    color: #072A24; /* Couleur du titre */
+    color: #007b5e; /* Couleur du titre */
     text-align: center;
 }
 
@@ -86,17 +87,19 @@ nav {
 }
 
 #calories-form button {
-    background-color: #739f5f; /* Couleur du bouton */
+    background-color: #007b5e; /* Couleur du bouton */
     color: white; /* Couleur du texte du bouton */
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: 'Georgia', serif;
+    font-size: large;
 }
 
 #calories-form button:hover {
-    background-color: #eac641; /* Couleur au survol du bouton */
+    background-color: #fbe3a2; /* Couleur au survol du bouton */
 }
 
 #resultat {
@@ -107,6 +110,7 @@ nav {
 h1 {
     text-align: center;
     font-family: 'Georgia', serif;
+
 }
 
 h2 {
@@ -136,4 +140,53 @@ h2 {
     max-width: 400px; /* Limite la largeur du formulaire */
     margin: 0 auto; /* Centre le formulaire sur la page */
     width: 100%; /* Assure que le formulaire prend toute la largeur disponible */
+}
+
+
+/* Responsive pour les écrans moyens */
+@media (max-width: 1024px) {
+    /* Ajuste les tailles et les marges du conteneur principal */
+    .container {
+        padding: 10px;
+    }
+    
+    /* Ajuste la taille de police pour les titres */
+    h1, h2 {
+        font-size: 24px;
+    }
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+    /* Ajuste les marges et les espacements */
+    .container {
+        padding: 5px;
+    }
+
+    /* Navigation: passe en colonne verticale */
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px; /* Espace entre les liens en mode colonne */
+    }
+
+    /* Taille et alignement du logo pour les petits écrans */
+    .logo {
+        margin: 0 auto;
+    }
+
+    /* Cartes de recettes en pleine largeur */
+    .recette-card {
+        width: 100%;
+    }
+
+    /* Formulaire de calculateur : pleine largeur */
+    #calories-form {
+        max-width: 100%; /* Prend toute la largeur disponible */
+    }
 }

@@ -1,6 +1,4 @@
-document.getElementById('calories-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Empêche le rechargement de la page
-
+function calculerCalories() {
     // Récupérer les valeurs du formulaire
     const age = parseInt(document.getElementById('age').value);
     const sexe = document.getElementById('sexe').value;
@@ -20,19 +18,19 @@ document.getElementById('calories-form').addEventListener('submit', function(eve
     let multiplier;
     switch (activite) {
         case 'sédentaire':
-            multiplier = 1.2; // Peu ou pas d'exercice
+            multiplier = 1.2;
             break;
         case 'légèrement actif':
-            multiplier = 1.375; // Exercice léger/sport 1-3 jours/semaine
+            multiplier = 1.375;
             break;
         case 'actif':
-            multiplier = 1.55; // Exercice modéré/sport 3-5 jours/semaine
+            multiplier = 1.55;
             break;
         case 'très actif':
-            multiplier = 1.725; // Exercice intense/sport 6-7 jours/semaine
+            multiplier = 1.725;
             break;
         default:
-            multiplier = 1.2; // Valeur par défaut
+            multiplier = 1.2;
     }
 
     // Calculer les calories nécessaires par jour
@@ -40,5 +38,5 @@ document.getElementById('calories-form').addEventListener('submit', function(eve
 
     // Afficher le résultat
     document.getElementById('calories').textContent = `${calories} calories`;
-    document.getElementById('resultat').style.display = 'block'; // Afficher la section des résultats
-});
+    document.getElementById('resultat').style.display = 'block';
+}

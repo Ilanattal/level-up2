@@ -2,12 +2,12 @@ body {
     font-family: 'Georgia', serif; /* Changez la police pour une plus chic */
 }
 
-/* Styles pour le menu de navigation */
+/* Styles de la barre de navigation pour correspondre à la page tarifs */
 nav {
-    background-color: #739f5f; /* Couleur de fond du menu */
+    background-color: #007b5e; /* Couleur de fond du menu */
     padding: 10px; /* Espacement interne */
     border-radius: 5px; /* Coins arrondis pour le menu */
-    margin-bottom: 20px; /* Espacement sous le menu */
+    margin-bottom: 0px; /* Espacement sous le menu */
 }
 
 .nav-container {
@@ -16,7 +16,7 @@ nav {
 }
 
 .logo {
-    width: 50px; /* Ajustez la taille du logo */
+    width: 50px; /* Ajustez la taille du logo pour uniformiser */
     height: auto; /* Maintient les proportions */
     margin-right: 20px; /* Espace à droite du logo */
 }

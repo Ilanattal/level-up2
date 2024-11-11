@@ -423,7 +423,7 @@ nav {
     position: absolute;
     top: 20px; /* Ajuste la position pour qu’il soit sous "Recommandé" */
     right: -10px;
-    background-color: #e53935; /* Rouge vif pour attirer l'attention */
+    background-color: #00c194; /* Rouge vif pour attirer l'attention */
     color: #ffffff;
     padding: 5px 10px;
     font-size: 0.9em;

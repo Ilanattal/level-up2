@@ -172,6 +172,7 @@ h1 {
 }
 
 #planning td {
+    color: white;
     padding: 15px; /* Espace interne des cellules */
     border-radius: 8px; /* Coins arrondis pour les cellules */
     text-align: center;

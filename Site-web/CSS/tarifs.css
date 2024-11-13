@@ -21,7 +21,7 @@ body {
 .logo {
     width: 50px;
     height: 50px;
-    background-color: #ccc;
+    /* background-color: #ccc; */
     border-radius: 50%;
 }
 
@@ -41,7 +41,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 40px;
+    padding: 0px;
     max-width: 1200px;
     margin: auto;
 }
@@ -51,7 +51,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
+    /* padding: 20px; */
+    padding-top: 130px;
 }
 
 /* Styles généraux pour chaque plan */
@@ -138,7 +139,7 @@ body {
     display: flex;
     flex-direction: row;  /* Texte à côté de l'image */
     width: 90%;  /* Augmente la largeur des services pour qu'ils occupent presque toute la largeur */
-    max-width: 1200px;  /* Limite la largeur maximale */
+    /* max-width: 1200px;  Limite la largeur maximale */
     background-color: #ffffff;
     border-radius: 12px; /* Coins plus arrondis pour un look moderne */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
@@ -281,48 +282,59 @@ body {
 
 
 
-/* Styles de la barre de navigation */
-/* Styles pour le menu de navigation */
+/* Styles de la barre de navigation pour occuper toute la largeur */
 nav {
-    background-color: #007b5e; /* Couleur de fond du menu */
-    padding: 10px; /* Espacement interne */
-    border-radius: 5px; /* Coins arrondis pour le menu */
-    margin-bottom: 20px; /* Espacement sous le menu */
+    background-color: #007b5e;
+    padding: 10px;
+    border-radius: 0; /* Supprime les coins arrondis pour couvrir toute la largeur */
+    width: 100%;
+    position: fixed; /* Fixe la navbar en haut de la page */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Assure que la navbar reste au-dessus du contenu */
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .nav-container {
-    display: flex; /* Utilise Flexbox pour l'alignement */
-    align-items: center; /* Centre verticalement les éléments */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Largeur maximale pour centrer le contenu */
+    padding: 0 20px;
 }
 
 .logo {
-    width: 50px; /* Ajustez la taille du logo */
-    height: auto; /* Maintient les proportions */
-    margin-right: 20px; /* Espace à droite du logo */
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
 }
 
 .nav-menu {
-    list-style-type: none; /* Supprime les puces */
-    padding: 0; /* Supprime le padding par défaut */
-    display: flex; /* Affichage en flex pour l'alignement horizontal */
-    flex: 1; /* Prend tout l'espace restant */
-    justify-content: space-around; /* Espace égal entre les liens */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
 }
 
 .nav-menu li {
-    margin: 0; /* Suppression de l'espacement entre les éléments du menu */
+    margin: 0;
 }
 
 .nav-menu a {
-    color: #ffffff; /* Couleur du texte */
-    text-decoration: none; /* Supprime le soulignement */
-    font-size: 18px; /* Taille de la police */
-    transition: color 0.3s ease; /* Transition pour le survol */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #eac641; /* Couleur au survol */
+    color: #eac641;
 }
+
 
 /* Style du badge Recommandé */
 .badge-recommended {

@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Assure que html et body occupent toute la hauteur de la fenêtre */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Fond de la page */
+    display: flex;
+    flex-direction: column; /* Organiser les sections verticalement */
+    justify-content: flex-start;
+    min-height: 100vh; /* Assure que le body occupe au moins toute la hauteur de la fenêtre */
+    color: #333; /* Couleur du texte par défaut */
+}
+
+/* Container principal */
+.container{
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que le container occupe toute la hauteur de la fenêtre */
+    overflow: auto; /* Permet au contenu de défiler si nécessaire */
+    background-color: white; /* Fond de la page */
+}
+.container1{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 150px; /* Assure que le container occupe toute la hauteur de la fenêtre */
+    overflow: auto; /* Permet au contenu de défiler si nécessaire */
+    background-color: white; /* Fond de la page */
+    margin-bottom: -80px;
+}
+
+/* Recipe Box */
+.recipe-box {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Image, contenu (ingrédients/recette), vidéo */
+    gap: 20px;
+    width: 100%; /* Prend toute la largeur disponible */
+    flex-grow: 1; /* Permet à cette section de prendre l'espace restant */
+    background-color: white; /* Couleur d'arrière-plan de la box */
+}
+
+/* Left section: image and title */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%; /* S'assure que la left-section prend toute la hauteur disponible */
+}
+
+/* Box de l'image */
+.image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: -50px;
+    margin-bottom: 20px;
+    margin-left: 10px
+}
+
+/* Contenu de l'image */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Box des informations nutritionnelles */
+.nutritional-info {
+    background-color: #fbe3a2; /* Changer la couleur */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Organise les éléments à l'intérieur verticalement */
+}
+.nutritional-info ul {
+    list-style: none; /* Retire les puces par défaut */
+    padding-left: 0;
+}
+
+.nutritional-info ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex; /* Aligne les éléments horizontalement */
+    align-items: center; /* Aligne le texte et le point verticalement */
+    font-weight: bold; /* Met le texte en gras */
+}
+
+
+.bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000; /* Couleur du point noir */
+    margin-right: 10px; /* Espace entre le point et le texte */
+}
+
+
+/* Section des Avis Client */
+.reviews-box {
+    background-color: #fbe3a2; /* Changer la couleur */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+}
+
+.reviews-box h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #007b5e; /* Changer la couleur */
+}
+
+/* Style des avis individuels */
+.review {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #739f5f; /* Changer la couleur */
+}
+
+.review-text {
+    font-size: 14px;
+    color: #555555;
+    margin-top: 5px;
+}
+
+/* Titre de la section nutritionnelle */
+.nutritional-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    flex-grow: 0; /* Garde le h3 fixe en haut */
+    color: #007b5e;
+}
+
+/* Liste des éléments nutritionnels */
+.nutritional-info ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permet à la liste de prendre tout l'espace restant */
+    padding: 0;
+    margin: 0;
+}
+
+.nutritional-info ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    flex-grow: 1; /* Permet aux éléments de la liste de prendre de l'espace disponible */
+}
+
+/* Titre du plat */
+.title-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #007b5e; /* Changer la couleur du titre */
+    margin-left: 60px;
+
+}
+
+/* Affichage des calories */
+.title-container .calories {
+    font-size: 16px;
+    color: #007b5e; /* Changer la couleur */
+}
+
+/* Middle section: ingredients and recipe */
+.middle-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Prend toute la largeur de la section */
+}
+
+/* Ingredients Box */
+
+
+
+
+.ingredients-box, .recipee-box {
+    background-color: #fbe3a2;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.recipee-box{
+    height: 100%;
+}
+.ingredients-box {
+    background-color: #fbe3a2; /* Par exemple, une autre couleur de fond */
+    padding: 20px;
+    border-radius: 12px;
+}
+
+
+/* Title */
+.ingredients-box h2, .recipe-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007b5e; /* Changer la couleur du titre */
+}
+
+.ingredients-box ul {
+    list-style-type: none;
+}
+
+.ingredients-box ul li {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Recipe steps */
+.steps {
+    margin-top: 20px;
+}
+
+.steps ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.steps ol li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Right section: video */
+.right-section {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ajuste la largeur de la vidéo */
+    max-width: 600px; /* Limite la largeur de la vidéo */
+    height: 100%; /* Limite la hauteur de la vidéo */
+    overflow-y: auto; /* Permet de défiler si la vidéo dépasse la hauteur de la box */
+}
+
+.right-section iframe {
+    width: 100%;
+    height: 100%; /* La vidéo occupe toute la hauteur de la section */
+    border-radius: 10px;
+}
+
+.right-section label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.steps ul {
+    padding-left: 30px; /* Ajoute un léger espace à gauche */
+}
+
+.steps ul li {
+    margin-bottom: 10px; /* Garde l'espacement entre les éléments */
+    font-size: 18px;
+}
+.steps strong {
+    font-weight: bold; /* Assure que le texte est bien en gras */
+    color: #007b5e; /* Choisis la couleur que tu préfères */
+}
+
+.ingredients-box ul {
+    list-style: none; /* Retire les puces par défaut */
+    padding-left: 0;
+}
+
+.ingredients-box ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex; /* Aligne les éléments horizontalement */
+    align-items: center; /* Aligne le texte et le point verticalement */
+}
+
+.bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #007b5e; /* Couleur du point noir */
+    margin-right: 10px; /* Espace entre le point et le texte */
+}
+
+nav {
+    background-color: #007b5e;
+    padding: 10px;
+    border-radius: 0; /* Supprime les coins arrondis pour couvrir toute la largeur */
+    width: 100%;
+    /* position: fixed; Fixe la navbar en haut de la page */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Assure que la navbar reste au-dessus du contenu */
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Largeur maximale pour centrer le contenu */
+    padding: 0 20px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #eac641;
+}
+
+
+/* Style pour le bouton retour */
+.back-button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #007b5e; /* Couleur de fond de la navbar */
+    color: #ffffff; /* Couleur de la flèche */
+    font-size: 28px;
+    text-align: center;
+    line-height: 50px; /* Centrer la flèche à l'intérieur du bouton */
+    border-radius: 50%; /* Pour que le bouton soit circulaire */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    position: relative; /* Fixer le bouton à la position donnée sur l'écran */
+    top: 0px; /* Place le bouton à 20px du haut de la fenêtre */
+    left: -150px; /* Place le bouton à l'extrême gauche de la fenêtre */
+    z-index: 1000; /* Assure que le bouton reste au-dessus du contenu */
+}
+
+.back-button:hover {
+    background-color: #739f5f; /* Changer la couleur au survol */
+}
+
+/* Optionnel : Ajouter un effet de focus pour l'accessibilité */
+.back-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 94, 0.5);
+}
+
+
+
+

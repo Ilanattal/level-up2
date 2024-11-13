@@ -1,66 +1,76 @@
-/* Styles globaux */
 html, body {
-    height: 100%; /* Assure que html et body prennent toute la hauteur */
-    margin: 0; /* Supprime les marges par défaut */
-    padding: 0; /* Supprime les paddings par défaut */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif; 
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Fond général */
+    font-family: 'Georgia', serif; 
+    background-color: #ffffff;
     color: #333;
     display: flex;
-    justify-content: center; /* Centre le contenu horizontalement */
-    align-items: flex-start; /* Aligne le contenu vers le haut */
-    min-height: 100vh; /* Assure que le body prend au moins toute la hauteur de l'écran */
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
-/* Styles de la barre de navigation pour correspondre à la page tarifs */
 nav {
-    background-color: #007b5e; /* Couleur de fond du menu */
-    padding: 10px; /* Espacement interne */
-    border-radius: 5px; /* Coins arrondis pour le menu */
-    margin-bottom: 0px; /* Espacement sous le menu */
+    background-color: #007b5e;
+    padding: 10px;
+    border-radius: 0; /* Supprime les coins arrondis pour couvrir toute la largeur */
+    width: 100%;
+    /* position: fixed; Fixe la navbar en haut de la page */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Assure que la navbar reste au-dessus du contenu */
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .nav-container {
-    display: flex; /* Utilise Flexbox pour l'alignement */
-    align-items: center; /* Centre verticalement les éléments */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Largeur maximale pour centrer le contenu */
+    padding: 0 20px;
 }
 
 .logo {
-    width: 50px; /* Ajustez la taille du logo pour uniformiser */
-    height: auto; /* Maintient les proportions */
-    margin-right: 20px; /* Espace à droite du logo */
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
 }
 
 .nav-menu {
-    list-style-type: none; /* Supprime les puces */
-    padding: 0; /* Supprime le padding par défaut */
-    display: flex; /* Affichage en flex pour l'alignement horizontal */
-    flex: 1; /* Prend tout l'espace restant */
-    justify-content: space-around; /* Espace égal entre les liens */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
 }
 
 .nav-menu li {
-    margin: 0; /* Suppression de l'espacement entre les éléments du menu */
+    margin: 0;
 }
 
 .nav-menu a {
-    color: #ffffff; /* Couleur du texte */
-    text-decoration: none; /* Supprime le soulignement */
-    font-size: 18px; /* Taille de la police */
-    transition: color 0.3s ease; /* Transition pour le survol */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #eac641; /* Couleur au survol */
+    color: #eac641;
 }
 
 
 /* Conteneur principal */
 .container {
-    max-width: 1300px; /* Largeur maximale */
+    max-width: auto; /* Largeur maximale */
     width: 100%; /* Prend toute la largeur disponible */
     padding: 0px; /* Espacement interne */
     background: #f9f9f9; /* Couleur de fond du conteneur */

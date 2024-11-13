@@ -73,7 +73,6 @@ nav {
 /* Conteneur principal pour les recettes */
 .recettes-container {
     padding: 20px;
-    max-width: 1200px;
     margin: 80px auto; /* Espace en haut pour laisser la place à la navbar fixe */
 }
 
